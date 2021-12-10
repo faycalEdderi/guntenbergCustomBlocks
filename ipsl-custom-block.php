@@ -21,6 +21,7 @@
  * @see https://developer.wordpress.org/block-editor/how-to-guides/block-tutorial/writing-your-first-block-type/
  */
 function ipsl_block_ipsl_custom_block_block_init() {
+	//error_log(var_export(plugin_dir_url(__FILE__), true));
 	register_block_type( __DIR__ );
 }
 add_action( 'init', 'ipsl_block_ipsl_custom_block_block_init' );

@@ -6,11 +6,13 @@ import './style.scss'
 import Edit from './edit'
 import save from './save'
 
-registerBlockType( 'ipsl-custom-block/multicolonnes', {
+
+
+registerBlockType( 'ipsl-custom-block/double-colonnes', {
 	apiVersion: 2,
-	title: __( 'Triple colonnes IPSL', 'ipsl-custom-block' ),
+	title: __( 'Double colonnes IPSL', 'ipsl-custom-block' ),
 	description: __(
-		'Création de 3 paragraphes en colonnes',
+		'Création de 2 paragraphes en colonnes',
 		'ipsl-custom-block'
 	),
 	category: 'text',
@@ -31,17 +33,22 @@ registerBlockType( 'ipsl-custom-block/multicolonnes', {
 			source: 'text',
 			selector: '.col1'
 		},
-		col2: {
+		
+		cover: {
 			type: 'string',
-			source: 'text',
-			selector: '.col2'
-		},
-		col3: {
-			type: 'string',
-			source: 'text',
-			selector: '.col3'
+			source: 'attribute',
+			selector: 'img',
+			attribute: 'src',
+		}, 
+		
+	},
+	example: {
+		attributes: {
+			cover: require('./multicol2.png')
+			
 		},
 	},
+
 	edit: Edit,
-	save,
+	save
 } )
