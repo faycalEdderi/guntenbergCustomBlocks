@@ -41,7 +41,20 @@ registerBlockType( 'ipsl-custom-block/multicolonnes', {
 			source: 'text',
 			selector: '.col3'
 		},
+		cover: {
+			type: 'string',
+			source: 'attribute',
+			selector: 'img',
+			attribute: 'src',
+		}, 
 	},
+	example: {
+		attributes: {
+			cover: require('./multicol3.png')
+			
+		},
+	},
+	
 	edit: Edit,
 	save,
 } )

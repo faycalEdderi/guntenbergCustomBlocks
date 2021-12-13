@@ -24,6 +24,7 @@ export default function Edit( props ) {
 	return (
 		
 		 <div  { ...blockProps }>
+			 <img src={ props.attributes.cover }/>
 
 				<input
 					

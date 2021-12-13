@@ -24,7 +24,7 @@ export default function Edit( props ) {
 	return (
 		
 		 <div  { ...blockProps }>
-
+				<img src={ props.attributes.cover }/>
 				<input
 					
 					value={ props.attributes.title }
@@ -40,7 +40,7 @@ export default function Edit( props ) {
 				/>
 				
 
-		<img src={ props.attributes.cover }/>
+		
 		
 		</div> 
 
